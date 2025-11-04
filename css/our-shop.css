@@ -1,0 +1,100 @@
+:root {
+    --main-color: rgb(195, 11, 11);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.head-two {
+    height: 400px;
+    text-align: center;
+    align-content: center;
+    color: #eee;
+    word-spacing: 2px;
+    line-height: 60px;
+    border-radius: 0 0 150px 150px;
+    background-image: linear-gradient(to right, rgb(180, 6, 6), rgb(204, 11, 11), red);
+}
+
+@media (max-width: 767px) {
+    .head-two {
+        height: 300px;
+        border-radius: 0 0 100px 100px;
+    }
+}
+
+.button-head {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .button-head {
+        margin: 70px 20px;
+    }
+}
+
+.trending-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    overflow: visible;
+}
+
+.button-head button {
+    color: white;
+    background-color: rgb(173, 163, 163);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+@media (max-width: 776px) {
+    .button-head button {
+        margin: 0;
+    }
+}
+
+.button-head button:hover {
+    color: rgb(219, 9, 9);
+}
+
+.button-head button.active {
+    color: var(--main-color);
+    background-color: #d6d2d2;
+}
+
+.end {
+    color: #eee;
+    padding: 50px;
+    border-radius: 80px 80px 0 0;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+    .end {
+        font-size: 12px;
+        padding: 40px;
+        margin-top: 50px;
+        letter-spacing: 0;
+    }
+}
+
+.trending-cards .card[data-card="1"],
+.trending-cards .card[data-card="2"] {
+    transform: scale(0);
+}
