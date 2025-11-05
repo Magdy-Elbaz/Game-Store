@@ -206,14 +206,17 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                 } else {
                     if (input_landingPage.value === "") {
                         msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
+                        msg_not_product.style.cssText = "scale: 1;";
+                        setTimeout(() => {
+                            msg_not_product.style.cssText = "scale: 0;";
+                        }, 3000);
                     } else {
-                        msg_not_product.innerHTML = `<span>!</span> The product is not available.`
+                        msg_not_product.innerHTML = `<span>!</span> The product is not available.`;
+                        msg_not_product.style.cssText = "scale: 1;";
+                        setTimeout(() => {
+                            msg_not_product.style.cssText = "scale: 0;";
+                        }, 3000);
                     };
-                    
-                    msg_not_product.style.cssText = "scale: 1;";
-                    setTimeout(() => {
-                        msg_not_product.style.cssText = "scale: 0;";
-                    }, 3000);
                 };
 
             });
