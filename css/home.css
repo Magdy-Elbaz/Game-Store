@@ -191,7 +191,7 @@ body {
 
     .heads .container .btns {
         position: absolute;
-        bottom: 70px;
+        bottom: 80px;
         right: -300px;
         transition: .5s;
         z-index: 20;
