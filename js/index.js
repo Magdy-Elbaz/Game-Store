@@ -73,11 +73,11 @@ toggle_menu.addEventListener("click", () => {
 });
 
 document.querySelector(".btn-login").addEventListener("click", () => {
-    window.open(`sign-in.html`, "_self")
+    window.open(`html/sign-in.html`, "_self")
 });
 
 document.querySelector(".cart-shop").addEventListener("click", () => {
-    window.open("car-shop.html", "_self")
+    window.open("html/car-shop.html", "_self")
 });
 
 let navbar = document.querySelector(".heads");

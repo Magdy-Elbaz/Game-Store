@@ -152,6 +152,14 @@ fetch(`../data.json`)
         });
     });
 
+document.querySelector(".btn-login").addEventListener("click", () => {
+    window.open(`../html/sign-in.html`, "_self")
+});
+
+document.querySelector(".cart-shop").addEventListener("click", () => {
+    window.open("../html/car-shop.html", "_self")
+});
+
 up.addEventListener("click", () => {
     window.scrollTo({
         top: 0,

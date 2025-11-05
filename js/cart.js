@@ -235,6 +235,14 @@ function deleteData(div_total, total_price) {
     });
 };
 
+document.querySelector(".btn-login").addEventListener("click", () => {
+    window.open(`../html/sign-in.html`, "_self")
+});
+
+document.querySelector(".cart-shop").addEventListener("click", () => {
+    window.open("../html/car-shop.html", "_self")
+});
+
 
 clearInterval(all.imgTime);
 
