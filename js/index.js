@@ -182,12 +182,6 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
         data.forEach((card) => {
             btn_landingPage.addEventListener("click", () => {
 
-                if (input_landingPage.value === "") {
-                    msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
-                } else {
-                    msg_not_product.innerHTML = `<span>!</span> The product is not available.`
-                };
-
                 if (input_landingPage.value.toLowerCase() === card.name.toLowerCase()) {
                     window.open(`html/product.html`, "_self");
                     const data = {
@@ -214,6 +208,12 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     setTimeout(() => {
                         msg_not_product.style.cssText = "scale: 0;";
                     }, 3000);
+                };
+
+                if (input_landingPage.value === "") {
+                    msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
+                } else {
+                    msg_not_product.innerHTML = `<span>!</span> The product is not available.`
                 };
 
             });
