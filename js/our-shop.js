@@ -150,7 +150,7 @@ fetch(`../data.json`)
 
             });
         });
-    })
+    });
 
 up.addEventListener("click", () => {
     window.scrollTo({

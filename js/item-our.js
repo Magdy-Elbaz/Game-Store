@@ -99,7 +99,7 @@ fetch(`../data.json`)
                     cards_home.innerHTML += `
                         <div class="card hover" data-card="${card.data_card}">
                             <span class="discound">${discound}</span>
-                            <img class="thumb" src="${card.img}" draggable="false">
+                            <img class="thumb" src="../${card.img}" draggable="false">
                             <div class="card-info">
                                 <div>
                                     <p>${card.description}</</p>

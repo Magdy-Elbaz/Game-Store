@@ -189,7 +189,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                 };
 
                 if (input_landingPage.value.toLowerCase() === card.name.toLowerCase()) {
-                    window.open(`product.html`, "_self");
+                    window.open(`html/product.html`, "_self");
                     const data = {
                         search: capitalString(input_landingPage.value)
                     };
@@ -199,7 +199,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     input_landingPage.value = "";
 
                 } else if (str.toLowerCase() === card.name.toLowerCase()) {
-                    window.open(`product.html`, "_self");
+                    window.open(`html/product.html`, "_self");
 
                     const data = {
                         search: capitalString(str)
@@ -280,7 +280,7 @@ function capitalString(str) {
 export function openProduct(el, aray_sessionstorage) {
     el.forEach((btn) => {
         btn.addEventListener("click", () => {
-            window.open(`html/product.html`, "_self");
+            window.open(`../html/product.html`, "_self");
             const data = {
                 title: btn.dataset.cart,
             };
