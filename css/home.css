@@ -366,6 +366,7 @@ body {
 
 .landing-page .text p {
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .landing-page-search {
@@ -442,7 +443,7 @@ body {
 
 .image-containe {
     overflow: hidden;
-    width: 550px;
+    width: 500px;
     height: 600px;
     border-radius: 50px;
     animation-name: image-key;
