@@ -202,15 +202,14 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     aray_sessionstorage.push(data);
                     sessionStorage.setItem("data", JSON.stringify(aray_sessionstorage));
                     input_landingPage.value = "";
-                    msg_not_product.style.cssText = "scale: 0;";
 
                 } else {
                     if (input_landingPage.value === "") {
                         msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
-                    } else {
+                    } else if (input_landingPage.value.toLowerCase() !== card.name.toLowerCase() || str.toLowerCase() !== card.name.toLowerCase()) {
                         msg_not_product.innerHTML = `<span>!</span> The product is not available.`
                     };
-                    
+
                     msg_not_product.style.cssText = "scale: 1;";
                     setTimeout(() => {
                         msg_not_product.style.cssText = "scale: 0;";
