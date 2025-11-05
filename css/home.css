@@ -165,6 +165,8 @@ body {
     }
 
     .heads .container nav ul {
+        position: absolute;
+        top: 50px;
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -189,7 +191,7 @@ body {
 
     .heads .container .btns {
         position: absolute;
-        bottom: 30px;
+        bottom: 50px;
         right: -300px;
         transition: .5s;
         z-index: 20;
