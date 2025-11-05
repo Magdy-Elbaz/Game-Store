@@ -167,7 +167,6 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
     let btn_landingPage = document.querySelector(".landing-page-search button");
     let msg_not_product = document.querySelector(".msg_not_product");
     let str = "";
-    let massage = "";
 
     if (input_landingPage) {
 
@@ -184,7 +183,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
             btn_landingPage.addEventListener("click", () => {
 
                 if (input_landingPage.value.toLowerCase() === card.name.toLowerCase()) {
-                    // window.open(`html/product.html`, "_self");
+                    window.open(`html/product.html`, "_self");
                     const data = {
                         search: capitalString(input_landingPage.value)
                     };
@@ -194,7 +193,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     input_landingPage.value = "";
 
                 } else if (str.toLowerCase() === card.name.toLowerCase()) {
-                    // window.open(`html/product.html`, "_self");
+                    window.open(`html/product.html`, "_self");
 
                     const data = {
                         search: capitalString(str)
@@ -209,13 +208,13 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                 if (input_landingPage.value === "") {
                     msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
                     msg_not_product.style.cssText = "scale: 1;";
-                    massage = setTimeout(() => {
+                    setTimeout(() => {
                         msg_not_product.style.cssText = "scale: 0;";
                     }, 3000);
                 } else {
                     msg_not_product.innerHTML = `<span>!</span> The product is not available.`;
                     msg_not_product.style.cssText = "scale: 1;";
-                    massage = setTimeout(() => {
+                    setTimeout(() => {
                         msg_not_product.style.cssText = "scale: 0;";
                     }, 3000);
                 };
