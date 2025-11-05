@@ -189,7 +189,7 @@ body {
 
     .heads .container .btns {
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
         right: -300px;
         transition: .5s;
         z-index: 20;
@@ -322,10 +322,10 @@ body {
     gap: 50px;
     display: flex;
     align-items: center;
-    padding: 100px 50px 130px;
+    justify-content: space-between;
+    padding: 30px;
+    min-height: 102vh;
     border-radius: 0 0 100px 100px;
-    word-spacing: 1px;
-    letter-spacing: 1px;
     overflow: hidden;
     position: relative;
     z-index: 2;
@@ -347,8 +347,9 @@ body {
 @media (max-width: 990px) {
     .landing-page {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
         gap: 20px;
+        border-radius: 0 0 50px 50px;
     }
 }
 
@@ -367,6 +368,19 @@ body {
 .landing-page .text p {
     margin-bottom: 20px;
     line-height: 1.6;
+    text-align: justify;
+    width: 700px;
+}
+
+@media (max-width: 767px) {
+    .landing-page .text h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+    .landing-page .text p {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .landing-page-search {
@@ -443,7 +457,7 @@ body {
 
 .image-containe {
     overflow: hidden;
-    width: 500px;
+    width: 350px;
     height: 600px;
     border-radius: 50px;
     animation-name: image-key;
