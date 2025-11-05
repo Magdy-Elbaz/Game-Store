@@ -167,6 +167,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
     let btn_landingPage = document.querySelector(".landing-page-search button");
     let msg_not_product = document.querySelector(".msg_not_product");
     let str = "";
+    let massage = "";
 
     if (input_landingPage) {
 
@@ -185,13 +186,13 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                 if (input_landingPage.value === "") {
                     msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
                     msg_not_product.style.cssText = "scale: 1;";
-                    setTimeout(() => {
+                    massage =setTimeout(() => {
                         msg_not_product.style.cssText = "scale: 0;";
                     }, 3000);
                 } else {
                     msg_not_product.innerHTML = `<span>!</span> The product is not available.`;
                     msg_not_product.style.cssText = "scale: 1;";
-                    setTimeout(() => {
+                    massage = setTimeout(() => {
                         msg_not_product.style.cssText = "scale: 0;";
                     }, 3000);
                 };
@@ -205,6 +206,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     aray_sessionstorage.push(data)
                     sessionStorage.setItem("data", JSON.stringify(aray_sessionstorage))
                     input_landingPage.value = "";
+                    clearTimeout(massage);
                     msg_not_product.style.cssText = "scale: 0;";
 
                 } else if (str.toLowerCase() === card.name.toLowerCase()) {
@@ -217,6 +219,7 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     aray_sessionstorage.push(data);
                     sessionStorage.setItem("data", JSON.stringify(aray_sessionstorage));
                     input_landingPage.value = "";
+                    clearTimeout(massage);
                     msg_not_product.style.cssText = "scale: 0;";
 
                 };
