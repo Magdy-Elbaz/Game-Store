@@ -183,22 +183,8 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
         data.forEach((card) => {
             btn_landingPage.addEventListener("click", () => {
 
-                if (input_landingPage.value === "") {
-                    msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
-                    msg_not_product.style.cssText = "scale: 1;";
-                    massage =setTimeout(() => {
-                        msg_not_product.style.cssText = "scale: 0;";
-                    }, 3000);
-                } else {
-                    msg_not_product.innerHTML = `<span>!</span> The product is not available.`;
-                    msg_not_product.style.cssText = "scale: 1;";
-                    massage = setTimeout(() => {
-                        msg_not_product.style.cssText = "scale: 0;";
-                    }, 3000);
-                };
-
                 if (input_landingPage.value.toLowerCase() === card.name.toLowerCase()) {
-                    window.open(`html/product.html`, "_self");
+                    // window.open(`html/product.html`, "_self");
                     const data = {
                         search: capitalString(input_landingPage.value)
                     };
@@ -206,11 +192,9 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     aray_sessionstorage.push(data)
                     sessionStorage.setItem("data", JSON.stringify(aray_sessionstorage))
                     input_landingPage.value = "";
-                    clearTimeout(massage);
-                    msg_not_product.style.cssText = "scale: 0;";
 
                 } else if (str.toLowerCase() === card.name.toLowerCase()) {
-                    window.open(`html/product.html`, "_self");
+                    // window.open(`html/product.html`, "_self");
 
                     const data = {
                         search: capitalString(str)
@@ -219,9 +203,21 @@ fetch(`../data.json`).then((re) => re.json()).then((data) => {
                     aray_sessionstorage.push(data);
                     sessionStorage.setItem("data", JSON.stringify(aray_sessionstorage));
                     input_landingPage.value = "";
-                    clearTimeout(massage);
-                    msg_not_product.style.cssText = "scale: 0;";
 
+                };
+
+                if (input_landingPage.value === "") {
+                    msg_not_product.innerHTML = `<span>!</span> The search field is empty.`;
+                    msg_not_product.style.cssText = "scale: 1;";
+                    massage = setTimeout(() => {
+                        msg_not_product.style.cssText = "scale: 0;";
+                    }, 3000);
+                } else {
+                    msg_not_product.innerHTML = `<span>!</span> The product is not available.`;
+                    msg_not_product.style.cssText = "scale: 1;";
+                    massage = setTimeout(() => {
+                        msg_not_product.style.cssText = "scale: 0;";
+                    }, 3000);
                 };
 
             });
